@@ -1,0 +1,47 @@
+/* custom styles */
+
+.container {
+  --main-color:#06c;
+  max-width: 10px;
+
+}
+
+div#body
+
+{
+	margin:auto;
+	width:710px;
+}
+div#header
+{
+	margin:0px auto 10px auto;
+	width:710px;
+	border:dotted 1px #ccc;
+}
+div#sidebar
+{
+	display:none;
+	border:solid 1px #CCC;
+}
+body.ms div#main, body.sm div#main
+{
+	width:490px;
+}
+body.ms div#sidebar, body.sm div#sidebar
+{
+	display:block;
+	width:200px;
+	border:solid 1px #CCC;
+}
+body.ms div#main, body.sm div#sidebar
+{
+	float:left;
+	border:solid 1px #CCC;
+}
+body.sm div#main, body.ms div#sidebar
+{
+	float:right;
+	border:solid 1px #CCC;
+
+}
+

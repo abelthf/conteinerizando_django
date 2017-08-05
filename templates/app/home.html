@@ -1,0 +1,33 @@
+{% extends "app/_base.html" %}
+
+
+{% block content %}
+
+<div class="text-center">
+  {% load staticfiles %}
+  <br>
+  <img src="http://www.turismoruralcomunitario.pe/static/assets/img/logo.png">
+  <br>
+  <p>Esta pagina ha sido vista <strong>{{counter}}</strong> veces!</p>
+</div>
+
+<br>
+
+<form action="/" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <input name="item_text" class="form-control input-lg" type="text" placeholder="Entre un mensaje" required>
+  </div>
+  <input type="submit" class="btn btn-success btn-lg btn-block" value="Enviar">
+</form>
+
+<br>
+<hr>
+
+<div>
+  {% for item in items %}
+    <h4 class="well"><strong>{{item.text}}</strong> - <em>{{item.date_posted}}</em></h4>
+  {% endfor %}
+</div>
+
+{% endblock content %}
